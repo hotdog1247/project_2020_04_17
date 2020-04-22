@@ -14,7 +14,7 @@ import com.yi.persistence.ProjectDAO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
-public class ProjectDAOtest {
+public class ProjectDAOTest {
 	
 	@Autowired
 	private ProjectDAO dao;
