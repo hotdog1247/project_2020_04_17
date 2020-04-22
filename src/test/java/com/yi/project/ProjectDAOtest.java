@@ -27,11 +27,30 @@ public class ProjectDAOtest {
 	public void testinsert() throws Exception {
 		ProjectVO vo = new ProjectVO();
 		vo.setName("관리자");
-		vo.setNo(1);
+		vo.setNo(2);
 		vo.setState("내용");
 		vo.setContent("관리자들의 하는 일을 프로젝트화");
 		vo.setSdate(new Date());
 		vo.setEdate(new Date());
 		dao.insert(vo);
 	}
+	
+	@Test
+	public void readByNo()  throws Exception{
+		dao.readByNo(1);
+	};
+	@Test
+	public void list() throws Exception{
+		dao.list();
+	};
+	@Test
+	public void update() throws Exception{
+		ProjectVO vo = dao.readByNo(1);
+		dao.update(vo);
+	};
+	@Test
+	public void delete() throws Exception{
+		ProjectVO vo = dao.readByNo(1);
+		dao.delete(vo);
+	};
 }
